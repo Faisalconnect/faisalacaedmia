@@ -1,0 +1,41 @@
+{
+  "name": "web-platform",
+  "version": "1.0.0",
+  "description": "Professional Web Platform with Admin Panel",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "start": "concurrently \"npm run backend:start\" \"npm run frontend:start\"",
+    "build": "npm run frontend:build",
+    "backend:dev": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "backend:seed": "cd backend && npm run seed",
+    "frontend:dev": "cd frontend && npm start",
+    "frontend:start": "cd frontend && npm start",
+    "frontend:build": "cd frontend && npm run build",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "setup": "npm run install:all && cp backend/.env.example backend/.env && cp frontend/.env.example frontend/.env",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "admin-panel",
+    "web-platform"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faisalconnect/faisalacaedmia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Faisalconnect/faisalacaedmia/issues"
+  },
+  "homepage": "https://github.com/Faisalconnect/faisalacaedmia#readme"
+}
